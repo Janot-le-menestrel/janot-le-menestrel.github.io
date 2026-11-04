@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Janot & Diana — Suivez l'aventure</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@600&family=IM+Fell+English:ital@0;1&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; }
+  body {
+    background: #2a1a12;
+    font-family: 'IM Fell English', Georgia, serif;
+    color: #3a2414;
+    display: flex; justify-content: center; align-items: flex-start;
+    padding: 24px 14px 40px;
+  }
+  .parchemin {
+    width: 100%; max-width: 440px;
+    background:
+      radial-gradient(ellipse at 50% 40%, #f6e7c4 0%, #ecd6a6 55%, #d9b97d 85%, #b88a4e 100%);
+    border-radius: 6px;
+    padding: 34px 26px 30px;
+    text-align: center;
+    box-shadow: 0 0 0 2px #6e1f1f, 0 0 0 6px #c9a24a, 0 12px 40px rgba(0,0,0,.6), inset 0 0 50px rgba(120,70,20,.45);
+  }
+  .lyre { width: 64px; height: 64px; margin: 0 auto 10px; display: block; }
+  h1 {
+    font-family: 'Cinzel Decorative', 'Cinzel', serif;
+    color: #6e1f1f; font-size: 30px; line-height: 1.15; margin: 0 0 6px;
+  }
+  .sous {
+    font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: .06em;
+    text-transform: uppercase; color: #7a5a2a; margin: 0 0 18px;
+  }
+  .intro { font-style: italic; font-size: 18px; line-height: 1.4; margin: 0 0 24px; }
+  .filet { height: 1px; background: linear-gradient(90deg, transparent, #8a6a3a, transparent); margin: 0 10px 22px; }
+  a.bouton {
+    display: block; text-decoration: none;
+    margin: 0 0 14px; padding: 14px 16px;
+    border-radius: 4px;
+    background: #6e1f1f; color: #f6e7c4;
+    border: 2px solid #c9a24a;
+    box-shadow: 0 3px 0 #4a1212;
+    font-family: 'Cinzel', serif; font-size: 17px; letter-spacing: .03em;
+  }
+  a.bouton small { display: block; font-family: 'IM Fell English', Georgia, serif; font-size: 15px; color: #e8cf9a; letter-spacing: 0; margin-top: 2px; }
+  a.bouton:active { transform: translateY(2px); box-shadow: 0 1px 0 #4a1212; }
+  .fin { font-style: italic; font-size: 16px; margin: 22px 0 0; color: #5a3a1c; }
+  .info { display:block; width:100%; cursor:pointer; margin:0 0 12px; padding:11px 14px; border-radius:4px;
+    background: rgba(255,248,230,.55); color:#6e1f1f; border:1.5px solid #8a6a3a;
+    font-family:'IM Fell English', Georgia, serif; font-style:italic; font-size:17px; }
+  .carnet { margin:24px 0 0; padding:16px 16px 14px; border:1.5px solid #8a6a3a; border-radius:4px; background: rgba(255,248,230,.45); font-size:16px; line-height:1.45; }
+  .carnet h2 { font-family:'Cinzel', serif; color:#6e1f1f; font-size:17px; margin:0 0 6px; }
+  .prix { font-family:'Cinzel', serif; color:#6e1f1f; }
+  .vue { display:none; }
+  .vue.active { display:block; }
+  .texte { text-align:left; font-size:17px; line-height:1.5; }
+  .texte h2 { font-family:'Cinzel', serif; color:#6e1f1f; font-size:21px; text-align:center; margin:0 0 14px; }
+  .texte p { margin:0 0 12px; }
+  .retour { margin-top:10px; }
+</style>
+</head>
+<body>
+  <main class="parchemin">
+    <svg class="lyre" viewBox="0 0 64 64" aria-hidden="true">
+      <g fill="none" stroke="#6e1f1f" stroke-width="3" stroke-linecap="round">
+        <path d="M18 12 C8 22 12 40 22 46 L42 46 C52 40 56 22 46 12"/>
+        <path d="M16 18 L48 18"/>
+        <path d="M24 18 L26 46 M32 18 L32 46 M40 18 L38 46" stroke-width="1.6"/>
+        <path d="M20 52 L44 52 M32 46 L32 52"/>
+      </g>
+      <circle cx="18" cy="12" r="3" fill="#c9a24a"/><circle cx="46" cy="12" r="3" fill="#c9a24a"/>
+    </svg>
+    <h1>Janot &amp; Diana</h1>
+    <p class="sous">Néo-médiéval, folk &amp; chants de pirates</p>
+    <p class="intro">Suivez l’aventure des ménestrels&nbsp;: concerts, coulisses et prochaines dates.</p>
+    <div class="filet"></div>
+    <section id="accueil" class="vue active">
+    <a class="bouton" href="https://www.facebook.com/share/1A91aoZnRS/">Facebook<small>Janot &amp; Diana</small></a>
+    <a class="bouton" href="https://www.instagram.com/janot_le_menestrel/">Instagram<small>@janot_le_menestrel</small></a>
+    <a class="bouton" href="https://www.instagram.com/hopeveryfp_/">Instagram<small>@hopeveryfp_</small></a>
+    <div class="filet" style="margin-top:22px"></div>
+    <button class="info" data-vue="menestrel">Qu’est-ce qu’un ménestrel&nbsp;?</button>
+    <button class="info" data-vue="contrafactum">Qu’est-ce qu’un contrafactum&nbsp;?</button>
+    <div class="carnet">
+      <h2>Notre carnet de ménestrels</h2>
+      Notre parcours, nos ambitions et les paroles de 10 de nos chansons, avec un badge exclusif offert.<br>
+      <span class="prix">Bientôt disponible&nbsp;: 5&nbsp;€</span> à nos spectacles.<br>
+      Livraison possible en Belgique&nbsp;: +4&nbsp;€. Commandez par message privé.
+    </div>
+    <p class="fin">Que la route vous soit douce, et la chope toujours pleine&nbsp;!</p>
+    </section>
+    <section id="vue-menestrel" class="vue texte">
+      <h2>Qu’est-ce qu’un ménestrel&nbsp;?</h2>
+      <p>Au Moyen Âge, le ménestrel était un poète et un musicien. Il chantait, racontait des histoires et accompagnait les troubadours à la vielle ou à la harpe. Les rois de France entretenaient même leurs propres troupes de ménestrels.</p>
+      <p>En 1321, à Paris, ils fondent leur corporation, dirigée par un chef au titre étonnant&nbsp;: le roi des ménestrels. Et ce titre a traversé les siècles… La suite se trouve dans notre carnet.</p>
+      <button class="info retour" data-vue="accueil">← Retour</button>
+    </section>
+    <section id="vue-contrafactum" class="vue texte">
+      <h2>Qu’est-ce qu’un contrafactum&nbsp;?</h2>
+      <p>Au Moyen Âge, les ménestrels prenaient des airs que tout le monde connaissait et y mettaient de nouvelles paroles&nbsp;: pour raconter les nouvelles du royaume, se moquer des puissants ou faire rire toute la taverne. C’est ce qu’on appelle le contrafactum.</p>
+      <p>Cette tradition, nous la faisons revivre&nbsp;: des mélodies que vous connaissez par cœur, habillées de nouveaux textes pleins d’histoire, d’aventure et d’humour.</p>
+      <button class="info retour" data-vue="accueil">← Retour</button>
+    </section>
+  </main>
+  <script>
+    function montre(v){document.querySelectorAll('.vue').forEach(function(e){e.classList.remove('active')});
+      var el=document.getElementById(v==='accueil'?'accueil':'vue-'+v)||document.getElementById('accueil');el.classList.add('active');window.scrollTo(0,0);}
+    document.querySelectorAll('[data-vue]').forEach(function(b){b.addEventListener('click',function(){var v=b.dataset.vue;
+      if(v==='accueil'){location.hash='accueil';}else{location.hash=v;}});});
+    window.addEventListener('hashchange',function(){montre(location.hash.slice(1)||'accueil')});
+    montre(location.hash.slice(1)||'accueil');
+  </script>
+</body>
+</html>
