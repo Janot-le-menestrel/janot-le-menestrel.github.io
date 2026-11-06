@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Janot & Diana — Suivez l'aventure</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@600&family=IM+Fell+English:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@600;700&family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=IM+Fell+English:ital@0;1&display=swap">
 <style>
   * { box-sizing: border-box; }
   html, body { margin: 0; min-height: 100%; }
   body {
     background: #2a1a12;
-    font-family: 'IM Fell English', Georgia, serif;
-    color: #3a2414;
+    font-family: 'EB Garamond', Georgia, serif; font-weight: 500;
+    color: #24140a;
     display: flex; justify-content: center; align-items: flex-start;
     padding: 24px 14px 40px;
   }
@@ -31,9 +31,9 @@
   }
   .sous {
     font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: .06em;
-    text-transform: uppercase; color: #7a5a2a; margin: 0 0 18px;
+    text-transform: uppercase; color: #5a3a14; font-weight: 700; margin: 0 0 18px;
   }
-  .intro { font-style: italic; font-size: 18px; line-height: 1.4; margin: 0 0 24px; }
+  .intro { font-style: italic; font-size: 19px; line-height: 1.4; margin: 0 0 24px; }
   .filet { height: 1px; background: linear-gradient(90deg, transparent, #8a6a3a, transparent); margin: 0 10px 22px; }
   a.bouton {
     display: block; text-decoration: none;
@@ -42,24 +42,24 @@
     background: #6e1f1f; color: #f6e7c4;
     border: 2px solid #c9a24a;
     box-shadow: 0 3px 0 #4a1212;
-    font-family: 'Cinzel', serif; font-size: 17px; letter-spacing: .03em;
+    font-family: 'Cinzel', serif; font-size: 17px; font-weight: 700; letter-spacing: .03em;
   }
-  a.bouton small { display: block; font-family: 'IM Fell English', Georgia, serif; font-size: 15px; color: #e8cf9a; letter-spacing: 0; margin-top: 2px; }
+  a.bouton small { display: block; font-family: 'EB Garamond', Georgia, serif; font-weight: 600; font-size: 16px; color: #f3dfb0; letter-spacing: 0; margin-top: 2px; }
   a.bouton:active { transform: translateY(2px); box-shadow: 0 1px 0 #4a1212; }
-  .fin { font-style: italic; font-size: 16px; margin: 22px 0 0; color: #5a3a1c; }
+  .fin { font-style: italic; font-size: 17px; margin: 22px 0 0; color: #3a2414; }
   .info { display:block; width:100%; cursor:pointer; margin:0 0 12px; padding:11px 14px; border-radius:4px;
     background: rgba(255,248,230,.55); color:#6e1f1f; border:1.5px solid #8a6a3a;
-    font-family:'IM Fell English', Georgia, serif; font-style:italic; font-size:17px; }
-  .carnet { margin:24px 0 0; padding:16px 16px 14px; border:1.5px solid #8a6a3a; border-radius:4px; background: rgba(255,248,230,.45); font-size:16px; line-height:1.45; }
-  .carnet h2 { font-family:'Cinzel', serif; color:#6e1f1f; font-size:17px; margin:0 0 6px; }
-  .prix { font-family:'Cinzel', serif; color:#6e1f1f; }
+    font-family:'EB Garamond', Georgia, serif; font-weight:600; font-style:italic; font-size:18px; }
+  .carnet { margin:24px 0 0; padding:16px 16px 14px; border:1.5px solid #8a6a3a; border-radius:4px; background: rgba(255,248,230,.45); font-size:17px; line-height:1.45; }
+  .carnet h2 { font-family:'Cinzel', serif; font-weight:700; color:#6e1f1f; font-size:17px; margin:0 0 6px; }
+  .prix { font-family:'Cinzel', serif; font-weight:700; color:#6e1f1f; }
   .vue { display:none; }
   .vue.active { display:block; }
-  .texte { text-align:left; font-size:17px; line-height:1.5; }
-  .texte h2 { font-family:'Cinzel', serif; color:#6e1f1f; font-size:21px; text-align:center; margin:0 0 14px; }
+  .texte { text-align:left; font-size:18px; line-height:1.5; }
+  .texte h2 { font-family:'Cinzel', serif; font-weight:700; color:#6e1f1f; font-size:21px; text-align:center; margin:0 0 14px; }
   .texte p { margin:0 0 12px; }
   .retour { margin-top:10px; }
-  .chapeau { margin:22px 0 0; font-style:italic; font-size:17px; line-height:1.4; }
+  .chapeau { margin:22px 0 0; font-style:italic; font-size:18px; font-weight:600; line-height:1.4; }
   a.don { display:block; text-decoration:none; margin:10px 0 0; padding:13px 16px; border-radius:4px;
     background:#c9a24a; color:#3a2414; border:2px solid #6e1f1f; box-shadow:0 3px 0 #8a6a3a;
     font-family:'Cinzel', serif; font-size:17px; font-weight:600; }
